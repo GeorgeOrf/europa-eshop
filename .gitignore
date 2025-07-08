@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# Env files
+.env
+
+#Idea
+**/Project-Eshop.idea.md
+
+# Logs
+logs/
+*.log
