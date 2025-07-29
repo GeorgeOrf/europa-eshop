@@ -14,9 +14,9 @@ const Home = () => {
     <>
     <Header />
     <main>
-      <Hero />
-      <MainShowcase />
-      <Banner />
+      <Hero /> {/* Hero section showing the logo */}
+      <MainShowcase /> {/* Featured products showcase */}
+      <Banner /> {/* Upcoming events */}
     </main>
     <Footer />
     </>

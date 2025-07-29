@@ -1,8 +1,7 @@
 .productCont{
-  width: 100%;
   background: black;
   border-radius:35px 35px;
-  margin-top: 20px;
+  margin: 20px;
 }
 h2{
   margin: 2% 0 0 7%;
