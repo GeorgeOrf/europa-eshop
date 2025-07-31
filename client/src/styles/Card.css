@@ -1,5 +1,5 @@
 .card{
-  background: #36454F;
+  background: white;
   width: 300px;
   height: 450px;
   border-radius: 15px;
@@ -10,35 +10,30 @@
   cursor: pointer;
 }
 .card img{
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 80%;
+  background: black;
+  align-self: center;
+  border-radius: 15px;
 }
 .card h3{
-  font-size: 16px;
-  color: black;
-  position: relative;
-  transition: all 0.3s ease-in-out;
+  margin-bottom: auto;
+  border-radius: 15px 15px 0 0;
 }
-.card h3::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--color-gray-light);
-}
-.card h3:hover{
+.card h3:hover,
+.card h4:hover {
   color: var(--color-text-secondary);
 }
 .card h4{
-  text-shadow: 0 0 10px white;
-  border: 2px solid black;
   border-radius: 0 0 15px 15px;
-  cursor: pointer;
-  background: var(--color-text-secondary);
+  margin-top: auto;
+  padding: 5px;
+}
+.card h3, 
+.card h4 {
+  color: black;
+  font-size: 16px;
   transition: all 0.3s ease-in-out;
-}
-.card h4:hover{
-  background: var(--color-gray-medium);
-}
+  background: rgba(219, 205, 205, 0.473);
+  width: 100%;
+} 

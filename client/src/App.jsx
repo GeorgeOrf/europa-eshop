@@ -11,7 +11,7 @@ import Contact from './pages/Contact'
 import About from './pages/AboutUs'
 import Login from './pages/Login'
 import Register from './pages/Register'
-
+import ProductDetails from './pages/ProductDetails';
 // States
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
     <Route path='/about' element={<About />} />
     <Route path='/login' element={<Login />} />
     <Route path='/register' element={<Register /> } />
+    <Route path='/product/:id' element={<ProductDetails /> } />
   </Routes>
  );
 }

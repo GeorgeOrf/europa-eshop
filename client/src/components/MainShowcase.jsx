@@ -1,46 +1,38 @@
+// General
+import { Link } from 'react-router-dom'
 // Styles
 import '../styles/MainShowcase.css'
-
 // Components
 import Card from './Card'
-// Assets
-import Tee from '../assets/placeHolderTee.webp'
-import Pants from '../assets/placeHolderPants.webp'
+import { useEffect, useState } from 'react'
+
 
 const MainShowcase = () => {
 
-    const cards = [
-    {
-      id: 1,
-      name: "Europa Hoodie",
-      price: "25.99$",
-      image: Tee
-    },
-    {
-      id: 2,
-      name: "Europa T-Shirt",
-      price: "25.99$",
-      image: Tee
-    },
-    {
-      id: 3,
-      name: "Europa Pants",
-      price: "25.99$",
-      image: Pants
-    }
-  ];
+  const [products, setProducts] = useState([]);
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const res = await fetch('http://localhost:5000/api/products');
+      const data = await res.json();
+      setProducts(data);
+    };
+
+    fetchProducts();
+  }, []);
+  
   return (
       <div className="productCont">
         <h2>Featured Products</h2>
           <div className="cardCont">
-            {cards.map(card => (
+            {products.map(product => (
+              <Link to={`/product/${product.id}`} className="prodLink" key={product.id}>
               <Card 
-              key={card.id}
-              name={card.name}
-              price={card.price}
-              image={card.image}
+              name={product.name}
+              price={product.price}
+              image={product.image}
               />
+              </Link>
             ))}
           </div>
       </div>

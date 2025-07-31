@@ -6,7 +6,7 @@ const Card = ({name, price, image}) => {
     <div className='card'>
       <h3>{name}</h3>
       <img src={image} alt="Product image" />
-      <h4>{price}</h4>
+      <h4>{price} €</h4>
     </div>
   )
 }

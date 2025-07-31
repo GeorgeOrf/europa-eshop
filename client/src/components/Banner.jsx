@@ -2,17 +2,21 @@
 import '../styles/Banner.css'
 // Components
 import Event from './Event'
-// Data
-import { mockEvents } from '../data/mockEvents'
 // 
 import { useEffect, useState } from 'react';
 const Banner = () => {
 
     const [events, setEvents] = useState([]);
 
-      useEffect(() => {
-        setEvents(mockEvents);
-      }, []);
+    useEffect(() => {
+      const fetchEvents = async () => {
+        const res = await fetch('http://localhost:5000/api/events');
+        const data = await res.json();
+        setEvents(data);
+      };
+
+      fetchEvents();
+    }, []);
 
   return (
     <>
