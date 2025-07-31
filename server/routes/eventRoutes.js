@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const events = require('../api/events');
+const Event = require('../models/Event');
 
-router.get('/', (req, res) => {
-  res.json(events);
+router.get('/', async (req, res) => {
+  try {
+    const events = await Event.find({});
+    res.json(events);
+  } catch (err) {
+    res.status(500).json({message: 'Server Error'});
+  }
 });
 
 module.exports = router;

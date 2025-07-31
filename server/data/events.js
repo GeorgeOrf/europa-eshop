@@ -1,46 +1,46 @@
 
 const events = [
   {
-    id: '1',
-    title: "Mock title",
-    date: "Mock date",
+    title: "Europa",
+    date: "17/06/2025",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error temporibus sint delectus laborum iste, placeat a totam minima animi et.",
-    image:"/images/90musicMock.jpg"
+    image:"/images/90musicMock.jpg",
+    location: "90 Music Point - Thessaloniki"
   },
     {
-    id: '2',
-    title: "Mock title",
-    date: "Mock date",
+    title: "Europa",
+    date: "17/06/2025",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error temporibus sint delectus laborum iste, placeat a totam minima animi et.",
-    image: "/images/90musicMock.jpg"
+    image: "/images/90musicMock.jpg",
+    location: "90 Music Point - Thessaloniki"
   },
     {
-    id: '3',
-    title: "Mock title",
-    date: "Mock date",
+    title: "Europa",
+    date: "17/06/2025",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error temporibus sint delectus laborum iste, placeat a totam minima animi et.",
-    image: "/images/90musicMock.jpg"
+    image: "/images/90musicMock.jpg",
+    location: "90 Music Point - Thessaloniki"
   },
     {
-    id: '4',
-    title: "Mock title",
-    date: "Mock date",
+    title: "Europa",
+    date: "17/06/2025",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error temporibus sint delectus laborum iste, placeat a totam minima animi et.",
-    image: "/images/90musicMock.jpg"
+    image: "/images/90musicMock.jpg",
+    location: "90 Music Point - Thessaloniki"
   },
     {
-    id: '5',
-    title: "Mock title",
-    date: "Mock date",
+    title: "Europa",
+    date: "17/06/2025",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error temporibus sint delectus laborum iste, placeat a totam minima animi et.",
-    image: "/images/90musicMock.jpg"
+    image: "/images/90musicMock.jpg",
+    location: "90 Music Point - Thessaloniki"
   },
     {
-    id: '6',
-    title: "Mock title",
-    date: "Mock date",
+    title: "Europa",
+    date: "17/06/2025",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error temporibus sint delectus laborum iste, placeat a totam minima animi et.",
-    image: "/images/90musicMock.jpg"
+    image: "/images/90musicMock.jpg",
+    location: "90 Music Point - Thessaloniki"
   },
 ];
 
