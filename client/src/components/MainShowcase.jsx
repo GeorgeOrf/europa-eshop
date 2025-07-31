@@ -26,7 +26,7 @@ const MainShowcase = () => {
         <h2>Featured Products</h2>
           <div className="cardCont">
             {products.map(product => (
-              <Link to={`/product/${product.id}`} className="prodLink" key={product.id}>
+              <Link key={product.id} to={`/product/${product._id}`} className="prodLink">
               <Card 
               name={product.name}
               price={product.price}

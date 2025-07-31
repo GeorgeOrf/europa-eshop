@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
 // Styles
 import '../styles/ProductDetails.css'
+// Components
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const ProductDetails = () => {
   
@@ -34,6 +37,8 @@ const ProductDetails = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
+    <>
+    <Header />
     <div className="outerProdCont">
       <div className="prodCont">
         <img src={`/${product.image}`} alt="Product Image" />
@@ -45,6 +50,8 @@ const ProductDetails = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   )
 }
 

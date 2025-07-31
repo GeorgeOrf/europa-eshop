@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const Register = () => {
   return (
-    <div>
+    <>
         <Header />
         <div className="outerCont">
           <div className="formCont">
@@ -26,7 +26,7 @@ const Register = () => {
           </div>
         </div>
       <Footer />
-    </div>
+    </>
   )
 }
 
