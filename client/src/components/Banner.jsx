@@ -30,6 +30,7 @@ const Banner = () => {
             title={event.title}
             date={event.date}
             description={event.description}
+            location={event.location}
             />
             ))}
           </div>
