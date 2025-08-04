@@ -1,7 +1,7 @@
 ## 🛍️ MERN eShop
   A full-stack e-commerce application built with the MERN stack (MongoDB, Express.js, React, Node.js).
   Built for EUROPA — a rising event brand that brings "the European wave" to local club culture. What started as a group of        friends hosting unforgettable parties has evolved into a full merchandise launch, powered by this custom e-commerce platform     which is actively being developed.
-	NOTE: I am currently migrating the styling from traditional CSS to Tailwind CSS to improve maintainability and responsiveness.
+### NOTE: I am currently migrating the styling from traditional CSS to Tailwind CSS to improve maintainability and responsiveness.
 
 ## 📸 Preview - Not final 
 
