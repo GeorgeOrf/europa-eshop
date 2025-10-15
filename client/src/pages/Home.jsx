@@ -1,6 +1,3 @@
-// Css
-import '../styles/Home.css'
-
 
 // Components
 import Header from '../components/Header'
@@ -13,7 +10,7 @@ const Home = () => {
   return (
     <>
     <Header />
-    <main>
+    <main className='flex flex-1 flex-col content-center'>
       <Hero /> {/* Hero section showing the logo */}
       <MainShowcase /> {/* Featured products showcase */}
       <Banner /> {/* Upcoming events */}

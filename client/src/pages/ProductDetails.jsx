@@ -1,11 +1,12 @@
 // General 
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
-// Styles
-import '../styles/ProductDetails.css'
 // Components
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import ProductCard from "../components/ProductCard";
+import QuantityControl from "../components/QuantityControl";
+import CartButton from "../components/CartButton";
 
 const ProductDetails = () => {
   
@@ -13,6 +14,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [quantity, setQuantity] = useState(0);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -39,18 +41,25 @@ const ProductDetails = () => {
   return (
     <>
     <Header />
-    <div className="outerProdCont">
-      <div className="prodCont">
-        <img src={`/${product.image}`} alt="Product Image" />
-        <div className="prodDetails">
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
-          <span>{product.price}€</span>
-          <button className="cartBtn">Add to cart</button>
-        </div>
-      </div>
+
+    <div className="flex justify-center items-center w-full h-[90vh]">
+      <ProductCard 
+       image={product.image}
+       name={product.name}
+       description={product.description}
+       price={product.price} 
+      >
+        <QuantityControl 
+          quantity={quantity}
+          onIncrement={() => setQuantity(q => q + 1)}
+          onDecrement={() => setQuantity(q => Math.max(q - 1, 0))}
+        />
+        <CartButton/>
+      </ProductCard>
     </div>
+
     <Footer />
+
     </>
   )
 }

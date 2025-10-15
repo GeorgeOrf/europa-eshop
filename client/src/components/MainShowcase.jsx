@@ -1,7 +1,5 @@
 // General
 import { Link } from 'react-router-dom'
-// Styles
-import '../styles/MainShowcase.css'
 // Components
 import Card from './Card'
 import { useEffect, useState } from 'react'
@@ -22,9 +20,9 @@ const MainShowcase = () => {
   }, []);
   
   return (
-      <div className="productCont">
-        <h2>Featured Products</h2>
-          <div className="cardCont">
+      <div className="bg-black rounded-[35px] m-[20px]">
+        <h2 className='ms-10 mt-2 text-(--color-text-primary)'>Featured Products</h2>
+          <div className="flex flex-row justify-evenly items-center w-full h-[500px]">
             {products.map(product => (
               <Link key={product.id} to={`/product/${product._id}`} className="prodLink">
               <Card 

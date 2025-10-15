@@ -1,45 +1,6 @@
-nav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  height: 50px;
-}
-.navOuterCont{
-  background: var(--color-bg);
-  width: 90%;
-  height: 45px;
-  border-radius: 25px;
-  display: flex;
-}
-.navOuterCont img{
-  width: 45px;
-  height: 100%;
-  margin-right: auto;
-}
-.navInnerCont{
-  display: flex;
-  gap: 40px;
-  list-style-type: none;
-  align-items: center;
-}
+
 .navItem{
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  transition: all 0.3s ease-in-out;
-}
-.navItem:nth-child(4){
-  margin-right: 15px;
-}
-.navItem a{
-  text-decoration: none;
-  color: var(--color-text-secondary);
-  transition: all 0.3s ease;
-}
-.navItem a:hover{
-  transform: scale(1.03);
+  @apply flex text-(--color-text-secondary) decoration-0 cursor-pointer hover:scale-105;
 }
 .navItem::after{
   content: "";
@@ -50,6 +11,7 @@ nav{
   background-color: var(--color-text-primary);
   transition: all 0.3s ease;
 }
+
 .navItem:hover::after{
   content: "";
   position: absolute;

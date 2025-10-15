@@ -2,8 +2,8 @@
 import { Routes, Route } from 'react-router-dom';
 
 // Styles
-import './Index.css'
 import './App.css'
+import './index.css'
 
 // Pages
 import Home from './pages/Home'
