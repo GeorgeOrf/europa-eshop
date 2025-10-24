@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import ProductCard from "../components/ProductCard";
 import QuantityControl from "../components/QuantityControl";
 import CartButton from "../components/CartButton";
+import { getItem, setItem } from "../utils/localStorage";
 
 const ProductDetails = () => {
   
@@ -14,7 +15,15 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [quantity, setQuantity] = useState(0);
+
+  const [quantity, setQuantity] = useState(() => {
+    const item = getItem('quantity');
+    return item || 0;
+  });
+
+  useEffect(() => {
+    setItem('quantity', quantity);
+  }, [quantity]);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -52,9 +61,15 @@ const ProductDetails = () => {
         <QuantityControl 
           quantity={quantity}
           onIncrement={() => setQuantity(q => q + 1)}
-          onDecrement={() => setQuantity(q => Math.max(q - 1, 0))}
+          onDecrement={() => setQuantity(q => Math.max(q - 1, 1))}
         />
-        <CartButton/>
+        <CartButton 
+          product={product}
+          quantity={quantity}
+          onReset={() => {
+            setQuantity(1);
+            setItem('quantity', 1);
+          }}/>
       </ProductCard>
     </div>
 

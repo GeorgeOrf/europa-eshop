@@ -24,7 +24,7 @@ const MainShowcase = () => {
         <h2 className='ms-10 mt-2 text-(--color-text-primary)'>Featured Products</h2>
           <div className="flex flex-row justify-evenly items-center w-full h-[500px]">
             {products.map(product => (
-              <Link key={product.id} to={`/product/${product._id}`} className="prodLink">
+              <Link key={product._id} to={`/product/${product._id}`} className="prodLink">
               <Card 
               name={product.name}
               price={product.price}

@@ -4,8 +4,26 @@ import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
 // Assets
 import logo from '../assets/placeHolder-logo.png'
+import { useEffect, useState } from 'react';
+
 
 const Header = () => {
+
+  const [hasCartItems, setHasCartItems] = useState(false);
+
+  useEffect(() => {
+    const checkCart = () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      setHasCartItems(cart.length > 0);
+    };
+  
+    checkCart();
+
+    window.addEventListener("cartUpdated", checkCart);
+    return () => window.removeEventListener("cartUpdated", checkCart);
+  }, []);
+
+  
   return (
     <header>
       <nav className='flex justify-center items-center bg-white w-full h-13'>
@@ -16,6 +34,9 @@ const Header = () => {
             <li className="navItem "><Link to="/contact">Contact</Link></li>
             <li className="navItem"><Link to="/about">About Us</Link></li>
             <li className="navItem"><Link to="/login">Login</Link></li>
+            {hasCartItems && (
+              <li className='navItem'><Link to="/cart">Cart</Link></li>
+            )}
           </ul>
         </div>
       </nav>

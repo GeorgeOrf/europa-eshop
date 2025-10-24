@@ -1,3 +1,4 @@
+
 const ProductCard = ({image, name, description, price, children }) => (
   <div className="bg-white w-[900px] h-[500px] rounded-[50px_200px] flex items-center p-5">
     <img 

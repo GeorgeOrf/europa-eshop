@@ -24,7 +24,7 @@ const Banner = () => {
           <div className="flex justify-center flex-wrap gap-[35px]">
                         {events.map(event => (
             <Event 
-            key={event.id}
+            key={event._id}
             image={event.image}
             title={event.title}
             date={event.date}

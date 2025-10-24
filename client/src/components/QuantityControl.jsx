@@ -2,7 +2,7 @@ const QuantityControl = ({ quantity, onIncrement, onDecrement }) => (
   <div className="flex items-center space-x-3">
     <button 
       onClick={onDecrement} 
-      className="w-[50px] tex-[22px] font-bold rounded-lg border border-gray-400 hover:bg-gray-100">
+      className="w-[50px] text-[22px] font-bold rounded-lg border border-gray-400 hover:bg-gray-100 cursor-pointer text-black">
         -
     </button>
 
@@ -13,7 +13,7 @@ const QuantityControl = ({ quantity, onIncrement, onDecrement }) => (
 
     <button 
       onClick={onIncrement} 
-      className="w-[50px] tex-[22px] font-bold rounded-lg border border-gray-400 hover:bg-gray-100">
+      className="w-[50px] text-[22px] font-bold rounded-lg border border-gray-400 hover:bg-gray-100 cursor-pointer text-black">
         +
     </button>
   </div>
